@@ -1,0 +1,3 @@
+load("/Users/zhangqinxia/WorkSpace/git/R_group3/Three/data/wiki_graph.rda")
+load("/Users/zhangqinxia/WorkSpace/git/R_group3/Three/data/wiki_graph.RData")
+load("/Users/zhangqinxia/WorkSpace/git/R_group3/Three/data/wiki_graph.rda")

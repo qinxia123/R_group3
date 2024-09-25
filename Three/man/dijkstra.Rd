@@ -4,10 +4,10 @@
 \alias{dijkstra}
 \title{Dijkstra's Algorithm for Shortest Paths}
 \usage{
-dijkstra(graph, init_node)
+dijkstra(wiki_graph, init_node)
 }
 \arguments{
-\item{graph}{A data.frame representing the adjacency matrix or edge list of the graph. The graph should contain edge weights.}
+\item{wiki_graph}{A data.frame representing the adjacency matrix or edge list of the graph. The graph should contain edge weights.}
 
 \item{init_node}{The node from which to calculate the shortest paths. It should be a valid node in the graph.}
 }
@@ -25,10 +25,9 @@ which may represent, for example, road networks. The algorithm starts from the s
 wiki_graph <- data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
     v2=c(2,3,6,1,3,4,1,2,4,6,2,3,5,4,6,1,3,5),
     w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
-)
-dijkstra(graph, init_node)
+
 
 }
 \references{
-\href(https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm){Dijkstra's Algorithm - Wikipedia}
+\href{https://en.wikipedia.org/wiki/Dijkstra\'s_algorithm}{Dijkstra's Algorithm - Wikipedia}
 }
