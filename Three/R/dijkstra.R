@@ -1,3 +1,30 @@
+#' Dijkstra's Algorithm for Shortest Paths
+#'
+#' This function implements Dijkstra's algorithm to find the shortest paths from a source node to all other nodes in a weighted graph.
+#'
+#' @param graph A data.frame representing the adjacency matrix or edge list of the graph. The graph should contain edge weights.
+#' @param init_node The node from which to calculate the shortest paths. It should be a valid node in the graph.
+#'
+#' @return A list where each element represents the shortest distance from the start node to the corresponding node in the graph. The list may also include the actual paths.
+#' 
+#' @details Dijkstra's algorithm is a greedy algorithm that calculates the shortest path between nodes in a graph, 
+#' which may represent, for example, road networks. The algorithm starts from the source node and explores the nearest neighbors with the smallest weights, updating the shortest path as it goes.
+#'
+#' @references \href(https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm){Dijkstra's Algorithm - Wikipedia}
+#' 
+#' @examples
+#' wiki_graph <- data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
+#'     v2=c(2,3,6,1,3,4,1,2,4,6,2,3,5,4,6,1,3,5),
+#'     w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
+#' )
+#' dijkstra(graph, init_node)
+#' 
+#' @export
+dijkstra <- function(graph, init_node) {
+  # Dijkstra's algorithm implementation
+}
+
+
 dijkstra <- function(graph, init_node){
   ##create graph
   node <- unique(graph[[1]])
