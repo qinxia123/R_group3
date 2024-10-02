@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{A linreg object.}
+
+\item{...}{Additional arguments (not used).}
 }
 \value{
 A named vector of coefficients.

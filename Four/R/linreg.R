@@ -77,7 +77,6 @@ linreg <- function(formula, data) {
     p_values = p_values,
     call = match.call()
   )
-  
   # Set the class of the result to 'linreg'
   class(result) <- "linreg"
   
@@ -146,14 +145,19 @@ plot.linreg <- function(x, ...) {
   #grid.arrange(p1, p2, ncol = 1)
 }
 
+
+resid <- function(x,...) {
+  UseMethod("resid")
+}
 #' Residuals method for linreg objects
 #'
 #' This method returns the residuals from a linreg object.
 #'
 #' @param x A linreg object.
+#' @param ... Additional arguments (not used).
 #' @return A vector of residuals.
 #' @export
-resid.linreg <- function(x) {
+resid.linreg <- function(x,...) {
   return(x$residuals)
 }
 
@@ -166,6 +170,7 @@ pred <- function(x,...) {
 #' This method returns the predicted values from a linreg object.
 #'
 #' @param x A linreg object.
+#' @param ... Additional arguments (not used).
 #' @return A vector of predicted values.
 #' @export
 pred.linreg <- function(x,...) {
@@ -177,22 +182,26 @@ pred.linreg <- function(x,...) {
 #' This method returns the coefficients from a linreg object.
 #'
 #' @param x A linreg object.
+#' @param ... Additional arguments (not used).
 #' @return A named vector of coefficients.
 #' @export
 coef.linreg <- function(x,...) {
   return(x$coefficients)
 }
 
+summary <- function(x,...) {
+  UseMethod("summary")
+}
 #' Summary method for linreg objects
 #'
 #' This method returns a summary of the linreg object, including coefficients,
 #' standard errors, t-values, p-values, and estimate of σˆ.
 #'
-#' @param object A linreg object.
+#' @param x A linreg object.
 #' @param ... Additional arguments (not used).
 #' @return A summary of the linreg object.
 #' @export
-summary.linreg <- function(x) {
+summary.linreg <- function(x,...) {
   cat("Call:\n")
   cat(deparse(x$call), "\n\n")
   
