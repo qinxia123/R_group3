@@ -1,0 +1,43 @@
+---
+title: "Introduction to the Four Package"
+author: "Quanlin Ren, Qinxia Zhang"
+date: "2024-10-02"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+vignette: >
+  %\VignetteIndexEntry{Introduction to the Four Package} 
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Overview
+
+The `Four` package provides a linear regression function `linreg` for performing multiple regression models. The package also implements several methods for `linreg` objects, such as `print()`, `summary()`, and `plot()`. This document will introduce how to use the package and show how to apply these methods on the `iris` dataset.
+
+# Install and Load Packages
+
+First, make sure you have the package installed and loaded:
+
+```r
+# Uncomment the line below to install the package if you haven't done so
+# devtools::install_github("your-username/Four")
+library(Four)
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Four)
+```
